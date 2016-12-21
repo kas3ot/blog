@@ -18,6 +18,10 @@
 			{!! Form::textarea('description', null, ['class' => 'form-control', 'placeholder' => 'Description', 'rows' => '4']) !!}
 		</div>
 
+		<div class="form-group">
+			<input type="hidden" name="_token" value="{{ csrf_token() }}">
+		</div>
+		
 		<!-- hidden input -->
 			{!! Form::hidden('user_id', Crypt::encrypt(Auth::user()->id)) !!}
 		<!-- hidden input -->

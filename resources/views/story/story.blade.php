@@ -45,6 +45,10 @@
 			
 				<!-- Comment secton -->
 				<div class="well well-sm">
+
+					<div class="form-group">
+						<input type="hidden" name="_token" value="{{ csrf_token() }}">
+					</div>
 					{!! Form::open(array('url' => 'story/addComment')) !!}
 
 					{!! Form::text('comment', null, ['class' => 'comment-box', 'placeholder' => 'Comment']) !!}

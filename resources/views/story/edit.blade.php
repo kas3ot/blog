@@ -22,6 +22,10 @@
 		<!-- hidden input -->
 
 		<div class="form-group">
+			<input type="hidden" name="_token" value="{{ csrf_token() }}">
+		</div>
+
+		<div class="form-group">
 			{!! Form::file('photo', ['class' => 'form-control']) !!}
 		</div>
 
